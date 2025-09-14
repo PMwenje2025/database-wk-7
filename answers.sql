@@ -1,4 +1,4 @@
--- Question 1: Achieving 1NF (First Normal Form) 🛠️
+-- Question 1: Achieving 1NF (First Normal Form)
 
 -- Drop table if it already exists
 DROP TABLE IF EXISTS ProductDetail;
@@ -29,16 +29,8 @@ JSON_TABLE(
 ) AS jt;
 
 
-/***************************************************
- Question 2: Achieving 2NF (Second Normal Form) 🧩
- Task:
- The table OrderDetails is in 1NF but still has
- partial dependencies. CustomerName depends only 
- on OrderID, not on the full composite key 
- (OrderID, Product). We must separate data into
- Orders and OrderItems.
-***************************************************/
-
+-- Question 2: Achieving 2NF (Second Normal Form) 🧩
+ 
 -- Disable foreign key checks to avoid drop issues
 SET FOREIGN_KEY_CHECKS = 0;
 
